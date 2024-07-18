@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:spader_tec_task/di.dart';
 import 'package:spader_tec_task/features/video/data/repos/video_repo_imple.dart';
 import 'package:spader_tec_task/features/video/presentation/manager/cubit/video_cubit.dart';
-import 'package:spader_tec_task/features/video/presentation/views/video.dart';
+import 'package:spader_tec_task/features/video/presentation/views/reels_view.dart';
 
 void main() {
   initInj();
@@ -16,10 +16,10 @@ class VideoApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'spader tec task',
+      debugShowCheckedModeBanner: false,
       home: BlocProvider(
         create: (context) => VideoCubit(videoRepoImple()),
-        child: const Video(),
+        child: const ReelsView(),
       ),
     );
   }
