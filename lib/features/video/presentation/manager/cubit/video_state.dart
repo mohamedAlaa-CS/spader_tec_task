@@ -14,11 +14,3 @@ final class GetVideoFailed extends VideoState {
 
   GetVideoFailed({required this.errorMessage});
 }
-
-final class SkipPrevious extends VideoState {}
-
-final class SkipNext extends VideoState {}
-
-final class PlayOrPause extends VideoState {}
-
-final class VedioController extends VideoState {}
